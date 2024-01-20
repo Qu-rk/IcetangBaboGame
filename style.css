@@ -14,8 +14,8 @@
     width: 120px;
     background-color: black;
     border-radius: 10%;
-    top: 0px;
-    left: 0px;
+    top: 300px;
+    left: 300px;
     transform: translate(-50%, -50%);
 }
 
