@@ -1,0 +1,1 @@
+const square = document.querySelector("#Icetang");

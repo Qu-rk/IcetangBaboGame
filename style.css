@@ -1,0 +1,25 @@
+#Icetang_2 {
+    height: 110px;
+    width: 110px;
+    background-color: aqua;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    border-radius: 10%;
+}
+
+#Icetang {
+    height: 120px;
+    width: 120px;
+    background-color: black;
+    border-radius: 10%;
+}
+
+#icetangimage {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    border-radius: 10%;
+}
