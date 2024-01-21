@@ -15,8 +15,7 @@
     background-color: black;
     border-radius: 10%;
     top: 300px;
-    left: 300px;
-    transform: translate(-50%, -50%);
+    left: 200px;
 }
 
 #icetangimage {
@@ -26,4 +25,17 @@
     top: 5px;
     left: 5px;
     border-radius: 10%;
+}
+
+#background {
+    height: 600px;
+    width: 1000px;
+    position: relative;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+    background-color: lightgray;
+    border-radius: 2%;
+    margin: 0 auto;
+    top: 20px;
 }
