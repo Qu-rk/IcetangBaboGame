@@ -8,6 +8,9 @@ let keyAPressed = false;
 let keySPressed = false;
 let keyDPressed = false;
 
+let squareSpeed = 1;
+let squareXYMoveSpeed = 1;
+
 //마우스로 움직임(주석)
 // document.addEventListener("mousemove", (e) => {
 //    square.style.left = e.clientX + "px";
@@ -19,15 +22,15 @@ document.addEventListener("keydown", (e) => {
         keyWPressed = true;
     }
 
-    else if (e.key == "a" || e.key == "A") {
+     if (e.key == "a" || e.key == "A") {
         keyAPressed = true;
     }
 
-    else if (e.key == "s" || e.key == "S") {
+     if (e.key == "s" || e.key == "S") {
         keySPressed = true;
     }
 
-    else if (e.key == "d" || e.key == "D") {
+     if (e.key == "d" || e.key == "D") {
         keyDPressed = true;
     }
 })
@@ -37,34 +40,34 @@ document.addEventListener("keyup", (e) => {
         keyWPressed = false;
     }
 
-    else if (e.key == "a" || e.key == "A") {
+     if (e.key == "a" || e.key == "A") {
         keyAPressed = false;
     }
 
-    else if (e.key == "s" || e.key == "S") {
+     if (e.key == "s" || e.key == "S") {
         keySPressed = false;
     }
 
-    else if (e.key == "d" || e.key == "D") {
+     if (e.key == "d" || e.key == "D") {
         keyDPressed = false;
     }
 })
 
 setInterval(function() {
     if (keyWPressed) {
-        squarePositionX -= 1;
+        squarePositionX -= squareXYMoveSpeed;
     }
 
-    else if (keyAPressed) {
-        squarePositionY -= 1;
+     if (keyAPressed) {
+        squarePositionY -= squareXYMoveSpeed;
     }
 
-    else if (keySPressed) {
-        squarePositionX += 1;
+     if (keySPressed) {
+        squarePositionX += squareXYMoveSpeed;
     }
 
-    else if (keyDPressed) {
-        squarePositionY += 1;
+     if (keyDPressed) {
+        squarePositionY += squareXYMoveSpeed;
     }
 
     square.style.top = squarePositionX + "px";
