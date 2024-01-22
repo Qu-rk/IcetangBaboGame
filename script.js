@@ -1,7 +1,7 @@
 const square = document.querySelector("#Icetang");
 
-let squarePositionX = 300;
-let squarePositionY = 200;
+let squarePositionY = 230;
+let squarePositionX = 100;
 
 let keyWPressed = false;
 let keyAPressed = false;
@@ -9,13 +9,6 @@ let keySPressed = false;
 let keyDPressed = false;
 
 let squareSpeed = 1;
-let squareXYMoveSpeed = 1;
-
-// 마우스로 움직임(주석)
-// document.addEventListener("mousemove", (e) => {
-//    square.style.left = e.clientX + "px";
-//    square.style.top = e.clientY + "px";
-// })
 
 document.addEventListener("keydown", (e) => {
     if (e.key == "w" || e.key == "W") {
@@ -55,33 +48,33 @@ document.addEventListener("keyup", (e) => {
 
 setInterval(function() {
     if (keyWPressed) {
-        squarePositionX -= squareXYMoveSpeed;
+        squarePositionY -= squareSpeed;
     }
 
     if (keyAPressed) {
-        squarePositionY -= squareXYMoveSpeed;
+        squarePositionX -= squareSpeed;
     }
 
     if (keySPressed) {
-        squarePositionX += squareXYMoveSpeed;
+        squarePositionY += squareSpeed;
     }
 
     if (keyDPressed) {
-        squarePositionY += squareXYMoveSpeed;
+        squarePositionX += squareSpeed;
     }
 
-    if (squarePositionY <= document.querySelector("#background").style.left - 5) {
-        squarePositionY += squareXYMoveSpeed;
-    } else if (squarePositionY >= document.querySelector("#background").style.left + 885) {
-        squarePositionY -= squareXYMoveSpeed;
+    if (squarePositionX <= document.querySelector("#background").style.left - 5) {
+        squarePositionX += squareSpeed;
+    } else if (squarePositionX >= document.querySelector("#background").style.left + 885) {
+        squarePositionX -= squareSpeed;
     }
 
-    if (squarePositionX <= -5) {
-        squarePositionX += squareXYMoveSpeed;
-    } else if (squarePositionX >= 485) {
-        squarePositionX -= squareXYMoveSpeed;
+    if (squarePositionY <= document.querySelector("#background").style.top - 5) {
+        squarePositionY += squareSpeed;
+    } else if (squarePositionY >= document.querySelector("#background").style.top + 485) {
+        squarePositionY -= squareSpeed;
     }
 
-    square.style.top = squarePositionX + "px";
-    square.style.left = squarePositionY + "px";
+    square.style.top = squarePositionY + "px";
+    square.style.left = squarePositionX + "px";
 }, 5)
